@@ -3,3 +3,5 @@
 > docker pull cvps/app:natcap
 > 
 > docker imagse
+>
+> start docker ps
