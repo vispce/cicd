@@ -10,6 +10,9 @@ for i in $(seq 1 $total); do
     echo "$filename" > /dev/null
     touch "$filename"
     sleep 1
+    git add .
+    git commit -m "push every day"
+    git push
     percent=$((i * 100 / total))
     filled=$((i * 40 / total))
     bar=$(printf "%${filled}s" | tr ' ' '+')
@@ -19,7 +22,4 @@ for i in $(seq 1 $total); do
            "$bar" "$percent" "$i" "$total" "$filename"
     
 done
-git add .
-git commit -m "push every day"
-git push
 echo -e "\n\n All $total files created and committed"
