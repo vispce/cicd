@@ -11,7 +11,7 @@ for i in $(seq 1 $total); do
     touch "$filename"
     sleep 1
     git add .
-    git commit -m "push every day$(datetime)"
+    git commit -m "push every day${datetime}"
     git push
     percent=$((i * 100 / total))
     filled=$((i * 40 / total))
