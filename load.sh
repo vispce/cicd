@@ -3,7 +3,7 @@ echo "This is git push every day"
 echo ""
 
 datetime=$(date +%Y_%m_%d_%H_%M_%S)
-total=31
+total=$(shuf -i 5-40 -n 1)
 
 for i in $(seq 1 $total); do
     filename="${datetime}_${i}.txt"
