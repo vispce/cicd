@@ -13,6 +13,7 @@ for i in $(seq 1 $total); do
     git add .
     git commit -m "push every day${datetime}"
     git push
+    rm -rf *.txt
     percent=$((i * 100 / total))
     filled=$((i * 40 / total))
     bar=$(printf "%${filled}s" | tr ' ' '+')
